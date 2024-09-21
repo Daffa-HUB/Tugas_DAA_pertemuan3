@@ -1,0 +1,72 @@
+#1
+import datetime as dt
+
+Tanggal = dt.date.today()
+Mahasiswa = ["Daffa", 2023071070, "Informatika", 'DAA', Tanggal, 'Universitas Pembangunan Jaya']
+print(Mahasiswa)
+print(Mahasiswa[1])
+
+#2
+upj = ('Universitas Pembangunan Jaya', 'Informatika', 'DAA')
+print(upj[0:2])
+
+#3
+bin_colors = ["Red","Green","Blue","Yellow"]
+print(bin_colors[1:2])
+print(bin_colors[2:2])
+
+#4
+nested_tuple = ["100", ("200", "400", "600"), "300", ("400", "800")]
+print(nested_tuple[0:])
+
+#5
+import pandas as pd
+
+df = pd.DataFrame(
+    [["Daffa", 2023071070, "Informatika", "Universitas Pembangunan Jaya"]],
+    columns=["Nama", "Nim", "Prodi", "Universitas"]
+)
+
+print(df)
+
+#6
+green = ['green', 'leaves','leaves']
+print(green)
+
+#7
+yellow = {'dandelions', 'fire hydrant', 'leaves'}
+red = {'rose', 'blood', 'fire hydrant', 'leaves'}
+
+union_result = yellow | red
+print("Hasil union (yellow | red):", union_result)
+
+intersection_result = yellow & red
+print("Hasil intersection (yellow & red):", intersection_result)
+
+#8
+import pandas as pd
+
+df = pd.DataFrame(
+    [["Informatika", 50, 30, 20],
+     ["Sistem Informasi", 55, 30, 25],
+     ["Teknik Sipil", 40, 30, 10]],
+
+    columns=["Prodi", "Mahasiswa", "Laki-Laki", "Perempuan"]
+)
+
+print(df)
+
+#9
+import numpy as np
+
+matrix = np.array([[100, 200, 300],
+                   [700, 600, 500],
+                   [900, 1000, 800]])
+
+transpose_matrix = matrix.T
+
+
+print("Matriks aslinya:")
+print(matrix)
+print("\nMatriks yang telah di transpose:")
+print(transpose_matrix)
