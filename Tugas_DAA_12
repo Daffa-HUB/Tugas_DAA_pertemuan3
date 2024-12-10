@@ -1,1 +1,23 @@
+Pengenalan Teori Network Analysis
+Jaringan adalah jaringan yang saling terhubung di setiap koneksi mewakili hubungan antara berbagai entitas yang sedang diselidikiDalam 
+teori analisis jaringan, kami mempelajari detail metodologi yang dikembangkan untuk mengeksplorasi dan menganalisis data 
+yang direpresentasikan sebagai jaringan. 
+
+
+konsep jalur terpendek (shortest path)
+yaitu rute yang menghubungkan dua node dalam jaringan tanpa ada pengulangan node.
+Jalur ini dihitung berdasarkan jumlah sisi yang dilalui, dan jalur dengan panjang paling kecil disebut jalur terpendek. 
+Konsep ini penting karena banyak digunakan dalam berbagai algoritma optimasi pada teori graf, 
+seperti penghitungan efisiensi jaringan, routing, atau analisis sistem transportasi. 
+Walaupun terdengar sederhana, penghitungan jalur terpendek dalam jaringan yang kompleks.
+Social Network Analysis, yang merupakan cabang dari network analysis.
+
+-Degree centrality adalah salah satu ukuran paling sederhana dalam
+analisis jaringan. Ukuran ini mengukur tingkat kepentingan atau pengaruh suatu node dalam jaringan berdasarkan jumlah 
+koneksi langsung yang dimiliki oleh node tersebut. 
+
+-Betweenness centrality mengukur seberapa sering suatu node dilewati pada jalur terpendek antar nodes
+
+-yang membedakannya adalah pada eigenvector centrality akan melihat konektivitas dari tetangga node itu juga.
+
 
