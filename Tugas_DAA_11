@@ -1,1 +1,139 @@
+(1)
+class Graph:
+def __init__(self, gdict=None):
+if gdict is None:
+gdict = {}
+self.gdict = gdict
+#Get the keys of the dictionary
+def getVertices (self):
+return list(self.gdict.keys())
+# Create dictionary with graph elements
+graph_elements = {
+"a": ["b", "c"],
+"b": ["a", "d"],
+"c": ["a", "d"],
+"d": ["e"],
+"e": ["d"]
+}
+#Create an instance of the Graph class and pass the graph_elements.
+g Graph (graph_elements)
+# Print the vertices by calling the getVertices method with parentheses
+print(g.getVertices())
 
+(2)
+class Graph:
+    def __init__(self, gdict=None):
+        if gdict is None:
+            gdict = {}
+        self.gdict = gdict
+
+    def edges(self):
+        return self.find_edges()
+
+    # Menemukan daftar sisi yang unik
+    def find_edges(self):
+        edgename = []
+        for vrtx in self.gdict:
+            for nxtvrtx in self.gdict[vrtx]:
+                if {vrtx, nxtvrtx} not in edgename:
+                    edgename.append({vrtx, nxtvrtx})
+        return edgename
+
+
+# Membuat dictionary dengan elemen-elemen graph
+graph_elements = {
+    "a": ["b", "c"],
+    "b": ["a", "d"],
+    "d": ["e"],
+    "e": ["d"]
+}
+
+g = Graph(graph_elements)
+print(g.edges())
+
+(3)
+class Graph:
+    def __init__(self, gdict=None):
+        if gdict is None:
+            gdict = {}
+        self.gdict = gdict
+
+    # Mendapatkan simpul (vertices)
+    def get_vertices(self):
+        return list(self.gdict.keys())
+
+    # Menambahkan simpul (vertex) baru
+    def add_vertex(self, vrtx):
+        if vrtx not in self.gdict:
+            self.gdict[vrtx] = []
+
+
+# Membuat dictionary dengan elemen-elemen graph
+graph_elements = {
+    "a": ["b", "c"],
+    "b": ["a", "d"],
+    "d": ["e"],
+    "e": ["d"]
+}
+
+# Membuat objek graph
+g = Graph(graph_elements)
+
+# Menambahkan simpul baru 'f'
+g.add_vertex("f")
+
+# Menampilkan daftar simpul
+print(g.get_vertices())
+
+(3)
+class Graph:
+    def __init__(self, gdict=None):
+        if gdict is None:
+            gdict = {}
+        self.gdict = gdict
+
+    # Mendapatkan semua sisi (edges)
+    def edges(self):
+        return self.find_edges()
+
+    # Menambahkan sisi baru
+    def add_edge(self, edge):
+        edge = set(edge)
+        (vrtx1, vrtx2) = tuple(edge)
+        if vrtx1 in self.gdict:
+            self.gdict[vrtx1].append(vrtx2)
+        else:
+            self.gdict[vrtx1] = [vrtx2]
+
+        if vrtx2 in self.gdict:
+            self.gdict[vrtx2].append(vrtx1)
+        else:
+            self.gdict[vrtx2] = [vrtx1]
+
+    # Menemukan semua sisi unik
+    def find_edges(self):
+        edgename = []
+        for vrtx in self.gdict:
+            for nxtvrtx in self.gdict[vrtx]:
+                if (nxtvrtx, vrtx) not in edgename and (vrtx, nxtvrtx) not in edgename:
+                    edgename.append((vrtx, nxtvrtx))
+        return edgename
+
+
+# Membuat dictionary dengan elemen-elemen graph
+graph_elements = {
+    "a": ["b", "c"],
+    "b": ["a", "d"],
+    "d": ["e"],
+    "e": ["d"]
+}
+
+# Membuat objek graph
+g = Graph(graph_elements)
+
+# Menambahkan sisi baru
+g.add_edge(("a", "e"))
+g.add_edge(("f", "g"))
+
+# Menampilkan daftar sisi
+print(g.edges())
